@@ -1,0 +1,100 @@
+////////////////////////////////////////////////////////////////////////////////
+// CUSTOMIZE SLATE
+////////////////////////////////////////////////////////////////////////////////
+// Use these settings to help adjust the appearance of Slate
+
+
+// BACKGROUND COLORS
+////////////////////
+$nav-bg: #f5f4f9 !default;
+$nav-subitem-bg: #f5f4f9 !default;
+$nav-active-bg: #EEB111 !default;
+$nav-active-parent-bg: #EEB111 !default; // parent links of the current section
+$examples-bg: #293953;
+$code-bg: #212D42;
+$code-annotation-bg: #293953;
+$lang-select-border: #000;
+$lang-select-bg: #293953;
+$lang-select-active-bg: #00B8F4;
+$lang-select-pressed-bg: #00B8F4;
+$main-bg: #FFFFFF;
+$aside-notice-bg: #1E70DD;
+$aside-warning-bg: #c97a7e;
+$aside-success-bg: #6ac174;
+$search-notice-bg: #c97a7e;
+
+// TEXT COLORS
+////////////////////
+$main-text: #0F0D08;
+$nav-text: #293953;
+$nav-active-text: #FFFFFF;
+$nav-active-parent-text: #FFFFFF;
+$lang-select-text: #fff;
+$lang-select-active-text: #FFFFFF;
+$lang-select-pressed-text: #FFFFFF;
+$aside-notice-text: #fff;
+$delete: #aa0011;
+$put: #1e70dd;
+$post: #ec7209;
+$get: #2db200;
+
+
+// SIZES
+//
+$nav-width: 240px;
+$examples-width: 45%;
+$code-width: 59%;
+$logo-margin: 20px;
+$main-padding: 28px;
+$nav-padding: 15px;
+$nav-v-padding: 10px;
+$nav-indent: 10px;
+$code-annotation-padding: 13px;
+$h1-margin-bottom: 21px;
+$tablet-width: 930px;
+$phone-width: $tablet-width - $nav-width;
+$nav-item-text: 16px;
+$nav-subitem-text: 14px;
+$notice-table-text: 14px;
+
+
+// FONTS
+////////////////////
+%default-font {
+  font-family: 'Helvetica LT W01 Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+}
+
+%header-font {
+  font-family: 'sofia-pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: bold;
+}
+
+%code-font {
+  font-family: Consolas, Menlo, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace, serif;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+
+// OTHER
+////////////////////
+$nav-footer-border-color: #666;
+$nav-embossed-border-top: #000;
+$nav-embossed-border-bottom: #939393;
+$search-box-border-color: #666;
+
+
+////////////////////////////////////////////////////////////////////////////////
+// INTERNAL
+////////////////////////////////////////////////////////////////////////////////
+// These settings are probably best left alone.
+
+%break-words {
+     word-break: break-all;
+
+     /* Non standard for webkit */
+     word-break: break-word;
+
+        hyphens: auto;
+}

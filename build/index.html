@@ -1,0 +1,424 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Welder API Reference</title>
+
+    <style>
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .gh {
+  color: #999999;
+}
+.highlight .sr {
+  color: #f6aa11;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .nb {
+  color: #f6aa11;
+}
+.highlight .cm {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #75715e;
+}
+.highlight .c1 {
+  color: #75715e;
+}
+.highlight .cs {
+  color: #75715e;
+}
+.highlight .c, .highlight .cd {
+  color: #75715e;
+}
+.highlight .err {
+  color: #960050;
+}
+.highlight .gr {
+  color: #960050;
+}
+.highlight .gt {
+  color: #960050;
+}
+.highlight .gd {
+  color: #49483e;
+}
+.highlight .gi {
+  color: #49483e;
+}
+.highlight .ge {
+  color: #49483e;
+}
+.highlight .kc {
+  color: #66d9ef;
+}
+.highlight .kd {
+  color: #66d9ef;
+}
+.highlight .kr {
+  color: #66d9ef;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .kt {
+  color: #66d9ef;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .sc {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .ss {
+  color: #ae81ff;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .s {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+}
+.highlight .nd {
+  color: #a6e22e;
+}
+.highlight .ne {
+  color: #a6e22e;
+}
+.highlight .nf {
+  color: #a6e22e;
+}
+.highlight .vc {
+  color: #ffffff;
+}
+.highlight .nn {
+  color: #ffffff;
+}
+.highlight .nl {
+  color: #ffffff;
+}
+.highlight .ni {
+  color: #ffffff;
+}
+.highlight .bp {
+  color: #ffffff;
+}
+.highlight .vg {
+  color: #ffffff;
+}
+.highlight .vi {
+  color: #ffffff;
+}
+.highlight .nv {
+  color: #ffffff;
+}
+.highlight .w {
+  color: #ffffff;
+}
+.highlight {
+  color: #ffffff;
+}
+.highlight .n, .highlight .py, .highlight .nx {
+  color: #ffffff;
+}
+.highlight .ow {
+  color: #f92672;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight .k, .highlight .kv {
+  color: #f92672;
+}
+.highlight .kn {
+  color: #f92672;
+}
+.highlight .kp {
+  color: #f92672;
+}
+.highlight .o {
+  color: #f92672;
+}
+    </style>
+    <link href="stylesheets/screen.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/print.css" rel="stylesheet" media="print" />
+      <script src="javascripts/all_nosearch.js"></script>
+  </head>
+
+  <body class="index" data-languages="[&quot;python&quot;,&quot;shell&quot;]">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="images/navbar.png" alt="Navbar" />
+      </span>
+    </a>
+    <div class="toc-wrapper">
+      <img src="images/logo.png" class="logo" alt="Logo" />
+        <div class="lang-selector">
+              <a href="#" data-language-name="python">Python</a>
+              <a href="#" data-language-name="shell">Curl</a>
+        </div>
+      <div id="toc" class="toc-list-h1">
+          <li>
+            <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
+          </li>
+          <li>
+            <a href="#usage" class="toc-h1 toc-link" data-title="Usage">Usage</a>
+          </li>
+          <li>
+            <a href="#endpoints" class="toc-h1 toc-link" data-title="Endpoints">Endpoints</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#create-project" class="toc-h2 toc-link" data-title="Endpoints">Create Project</a>
+                  </li>
+                  <li>
+                    <a href="#delete-project" class="toc-h2 toc-link" data-title="Endpoints">Delete Project</a>
+                  </li>
+                  <li>
+                    <a href="#read-file" class="toc-h2 toc-link" data-title="Endpoints">Read File</a>
+                  </li>
+                  <li>
+                    <a href="#create-folder" class="toc-h2 toc-link" data-title="Endpoints">Create Folder</a>
+                  </li>
+                  <li>
+                    <a href="#upload-file" class="toc-h2 toc-link" data-title="Endpoints">Upload File</a>
+                  </li>
+                  <li>
+                    <a href="#list-full-bom" class="toc-h2 toc-link" data-title="Endpoints">List Full Bom</a>
+                  </li>
+                  <li>
+                    <a href="#download-archive" class="toc-h2 toc-link" data-title="Endpoints">Download Archive</a>
+                  </li>
+                  <li>
+                    <a href="#read-file-tree" class="toc-h2 toc-link" data-title="Endpoints">Read File Tree</a>
+                  </li>
+              </ul>
+          </li>
+      </div>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <h1 id='introduction'>Introduction</h1>
+<p>Welcome to the Welder API! Using Welder you&#39;ll be able to interact with a git backend,
+either self-hosted or local, to create and manipulate project repositories.</p>
+<pre class="highlight plaintext"><code>API Endpoint
+http://localhost:8000
+
+Summary of Resources:
+/username/projectname/create
+/username/projectname/delete
+/username/projectname/readfile?path=
+/username/projectname/newfolder
+/username/projectname/listbom
+/username/projectname/archive/download
+/username/projectname/upload
+/username/projectname?path=
+</code></pre><h1 id='authentication'>Authentication</h1>
+<p>Authentication is disabled when Django&#39;s debug setting is set to True. When Authentication is enabled
+you will not be able to use any of the endpoints without rolling out and connecting your own Authentication/Authorization service. Authentication and permissions are handled by by the permissions app.</p>
+<pre class="highlight plaintext"><code>DEBUG = True
+</code></pre><h1 id='usage'>Usage</h1>
+<p>First run Welder.</p>
+<pre class="highlight plaintext"><code>python manage.py runserver
+</code></pre>
+<p>You can then either interact programmatically using the examples in this document or use Postman
+and Welder&#39;s Postman collection to send the API requests.</p>
+
+<p><a href="https://app.getpostman.com/run-collection/085b6696a9590b87504b#?env%5BGroot%20Environment%5D=W3siZW5hYmxlZCI6dHJ1ZSwia2V5IjoidXNlciIsInZhbHVlIjoiYmVuIiwidHlwZSI6InRleHQifSx7ImVuYWJsZWQiOnRydWUsImtleSI6InByb2plY3QiLCJ2YWx1ZSI6Im15IHRlc3QiLCJ0eXBlIjoidGV4dCJ9LHsiZW5hYmxlZCI6dHJ1ZSwia2V5IjoiYXBpIiwidmFsdWUiOiJodHRwczovL3Rlc3Qud2V2b2x2ZXIuY29tIiwidHlwZSI6InRleHQifV0="><img src="https://run.pstmn.io/button.svg" alt="Postman" /></a></p>
+<pre class="highlight json tab-json"><code><span class="err">Environment</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="s2">"wevovler (user)"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"project"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mytest (project)"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"api"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://localhost:8000"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h1 id='endpoints'>Endpoints</h1><h2 id='create-project'>Create Project</h2>
+<p>Creates a bare repository with the provided username and project name.
+The directory structure is generated uniquely using a hash of the username.
+See: <a href="https://github.com/blog/117-scaling-lesson-23742">here</a></p>
+<pre class="highlight python tab-python"><code><span class="n">python</span> <span class="kn">import</span> <span class="nn">requests</span>
+<span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s">"/wevolver/mytest/create"</span><span class="p">)</span>
+</code></pre><pre class="highlight shell tab-shell"><code>curl -X POST <span class="s1">'/wevolver/mytest/create'</span>
+</code></pre>
+<blockquote>
+<p>The above command creates wevolver&#39;s project mytest and returns a message structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Created at ./repos/wevolver/mytest"</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request'>HTTP Request</h3>
+<p><code>POST /create/&lt;username&gt;/&lt;projectname&gt;</code></p>
+<h2 id='delete-project'>Delete Project</h2>
+<p>Deletes the specified project.</p>
+<pre class="highlight python tab-python"><code><span class="n">python</span> <span class="kn">import</span> <span class="nn">requests</span>
+<span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s">"/wevolver/mytest/delete"</span><span class="p">)</span>
+</code></pre><pre class="highlight shell tab-shell"><code>curl -X POST <span class="s1">'/wevolver/mytest/delete'</span>
+</code></pre>
+<blockquote>
+<p>The above command deletes wevolver&#39;s project mytest and returns a message structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Deleted at ./repos/wevolver/myest"</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-2'>HTTP Request</h3>
+<p><code>GET /&lt;username&gt;/&lt;projectname&gt;/delete</code></p>
+<h2 id='read-file'>Read File</h2>
+<p>Gets the raw contents of the file at the specified path.</p>
+<pre class="highlight python tab-python"><code><span class="n">python</span> <span class="kn">import</span> <span class="nn">requests</span>
+<span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">"/wevolver/mytest/readfile?path=readme.md"</span><span class="p">)</span>
+</code></pre><pre class="highlight shell tab-shell"><code>curl -X GET <span class="s1">'/wevolver/mytest/readfile?path=readme.md'</span>
+</code></pre>
+<blockquote>
+<p>The above command gets the file readme.md from wevolver&#39;s project my test and returns it structured like this:</p>
+</blockquote>
+<pre class="highlight markdown tab-markdown"><code><span class="gh">#mytest</span>
+This is where you should document your project  
+<span class="gu">### Getting Started</span>
+</code></pre><h3 id='http-request-3'>HTTP Request</h3>
+<p><code>GET /&lt;username&gt;/&lt;projectname&gt;/readfile?path=readme.md</code></p>
+<h2 id='create-folder'>Create Folder</h2>
+<p>Creates a new folder in the given directory. The folder path is specified by the
+path parameter of the POST.</p>
+<pre class="highlight python tab-python"><code><span class="n">python</span> <span class="kn">import</span> <span class="nn">requests</span>
+<span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s">"/wevolver/wevolver/newfolder"</span><span class="p">)</span>
+</code></pre><pre class="highlight shell tab-shell"><code>curl -X POST <span class="s1">'/wevolver/mytest/newfolder'</span>
+</code></pre>
+<blockquote>
+<p>The above command creates the newfoler in wevolver&#39;s project mytest returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Folder Created"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-4'>HTTP Request</h3>
+<p><code>POST /&lt;username&gt;/&lt;projectname&gt;/newfolder</code></p>
+<h2 id='upload-file'>Upload File</h2>
+<p>Uploads the attached files to the specified path.</p>
+<pre class="highlight python tab-python"><code><span class="n">python</span> <span class="kn">import</span> <span class="nn">requests</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">'path'</span><span class="p">)</span> <span class="k">as</span> <span class="n">fp</span><span class="p">:</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s">'/{}/{}/upload?path={}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">user</span><span class="p">,</span> <span class="n">app</span><span class="p">,</span> <span class="s">"test.json"</span><span class="p">),</span> <span class="p">{</span><span class="s">'file'</span><span class="p">:</span> <span class="n">fp</span><span class="p">})</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="s2">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Files uploaded"</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-5'>HTTP Request</h3>
+<p><code>POST /&lt;username&gt;/&lt;projectname&gt;/upload?path=</code></p>
+<h2 id='list-full-bom'>List Full Bom</h2>
+<p>Looks through the entire project for any file named <code>bom.csv</code>. Each of these
+files are concatenated and, once duplicates are removed, the master BOM is returned.</p>
+<pre class="highlight python tab-python"><code><span class="n">python</span> <span class="kn">import</span> <span class="nn">requests</span>
+<span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">"/wevolver/mytest/listbom"</span><span class="p">)</span>
+</code></pre><pre class="highlight shell tab-shell"><code>curl -X GET <span class="s1">'/wevolver/mytest/listbom'</span>
+</code></pre>
+<blockquote>
+<p>The above command returns wevolver&#39;s project mytest&#39;s full bom as JSON structured like this:</p>
+</blockquote>
+<pre class="highlight plaintext"><code>name, url, quantity, price
+test, google.com, 1, 1
+</code></pre><h3 id='http-request-6'>HTTP Request</h3>
+<p><code>GET /&lt;username&gt;/&lt;projectname&gt;/listbom</code></p>
+<h2 id='download-archive'>Download Archive</h2>
+<p>Grabs and returns a user&#39;s repository as a tarball.</p>
+<pre class="highlight python tab-python"><code><span class="n">python</span> <span class="kn">import</span> <span class="nn">requests</span>
+<span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'/wevolver/mytest/download/archive'</span><span class="p">)</span>
+</code></pre><pre class="highlight shell tab-shell"><code>curl -X GET <span class="s1">'/wevolver/mytest/download/archive'</span>
+</code></pre>
+<blockquote>
+<p>The above command downloads the project directory zipped</p>
+</blockquote>
+<h3 id='http-request-7'>HTTP Request</h3>
+<p><code>GET /&lt;username&gt;/&lt;projectname&gt;/archive/download</code></p>
+<h2 id='read-file-tree'>Read File Tree</h2>
+<p>Grabs and returns a single file or a tree from a user&#39;s repository.
+The requested tree is first parsed into JSON.</p>
+<pre class="highlight python tab-python"><code><span class="n">python</span> <span class="kn">import</span> <span class="nn">requests</span>
+<span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">"/wevolver/mytest?path=/"</span><span class="p">)</span>
+</code></pre><pre class="highlight shell tab-shell"><code>curl -X GET <span class="s1">'/wevolver/mytest?path=/'</span>
+</code></pre>
+<blockquote>
+<p>The above command reads wevolver&#39;s project mytest at path / and returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"file"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"tree"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"new"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tree"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"oid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"7b93b85c3a2aba0d510cc223ba15501b8c6283d5"</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"readme.md"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"blob"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"oid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"63c3ffbf73a78311a168a6949ec6bce690faa74e"</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-8'>HTTP Request</h3>
+<p><code>GET /&lt;username&gt;/&lt;projectname&gt;?path=/</code></p>
+
+      </div>
+      <div class="dark-box">
+          <div class="lang-selector">
+                <a href="#" data-language-name="python">Python</a>
+                <a href="#" data-language-name="shell">Curl</a>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>
